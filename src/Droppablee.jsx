@@ -45,7 +45,7 @@ function Dragb() {
         />
         <label htmlFor="file">
           {" "}
-          <IoImages size={36} color="#1F4382" className="me-2" />
+          <IoImages size={36} color="#fff" className="me-2" />
           <p className="m-0 p-0 uploudImg_text">Загрузить Изображения</p>
         </label>
       </div>
@@ -67,10 +67,17 @@ function Dragb() {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <div className="characters-thumb">
-                          <img src={URL.createObjectURL(img)} alt="" />
+                        <div className="characters-div">
+                          <div className="characters-thumb">
+                            <img src={URL.createObjectURL(img)} alt="" />
+                          </div>
+                          <p>
+                            {" "}
+                            {name.substring().length > 19
+                              ? `${name.substring(0, 19)}...`
+                              : name}
+                          </p>
                         </div>
-                        <p>{name}</p>
                         <button onClick={() => deleteHandler(id)}>
                           Delete
                         </button>

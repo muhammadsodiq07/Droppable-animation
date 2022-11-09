@@ -1,14 +1,11 @@
 import React from "react";
+import Dragb from "./Droppablee";
 import "./App.scss";
-import Dragb from "./Dragb";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      
         <Dragb />
-      </header>
     </div>
   );
 }
